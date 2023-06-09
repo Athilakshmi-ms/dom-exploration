@@ -18,7 +18,7 @@ for (let i = 0; i < image.length; i++) {
 
 //Loop through all the paragraphs and display their content in the console. If the paragraph has a class, display its classname as well
 
-let paragraph = document.querySelectorAll('p'); //getting every p and assigning them in whole as a value to a var
+const paragraph = document.querySelectorAll('p'); //getting every p and assigning them in whole as a value to a var
 for (let i = 0; i < paragraph.length; i++) {  //we have to get to reach each element inside the array, so here comes the loop
     if (paragraph[i].classList.length > 0) {
         console.log(paragraph[i].className +" "+ paragraph[i].textContent);
@@ -30,3 +30,20 @@ for (let i = 0; i < paragraph.length; i++) {  //we have to get to reach each ele
 
 //Give each of the paragraph a random text color (different for each one) UNLESS it has a class then leave it as it is.
 
+let p = document.querySelectorAll('p');
+for( let i=0; i<p.length; i++){
+    if(p[i].classList.length == 0){
+        //let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        p[i].style.color = getRandomColor();
+    }
+}
+// Function to generate a random color
+function getRandomColor() {
+  let letters = '0123456789ABCDEF';
+  let color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+console.log(getRandomColor())
