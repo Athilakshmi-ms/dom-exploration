@@ -40,7 +40,7 @@ const article = document.querySelector("article");
 
 for(let i=0; i<array.length; i++) {
     const sec = document.createElement("section");
-    if(Math.random()<0.5){
+    if(Math.random()<0.9){
         article.appendChild(sec);  
     } else {
         var lastOne = document.querySelector("section")
