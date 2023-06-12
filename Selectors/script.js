@@ -33,7 +33,6 @@ for (let i = 0; i < paragraph.length; i++) {  //we have to get to reach each ele
 let p = document.querySelectorAll('p');
 for( let i=0; i<p.length; i++){
     if(p[i].classList.length == 0){
-        //let randomColor = Math.floor(Math.random()*16777215).toString(16);
         p[i].style.color = getRandomColor();
     }
 }
@@ -45,5 +44,6 @@ function getRandomColor() {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
+
 }
 console.log(getRandomColor())
